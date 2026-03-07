@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int findMax(int *a, int size)
+{
+    int max = *a;
+    int i;
+
+    for (i = 1; i < size; i++)
+    {
+        if (*(a + i) > max)
+            max = *(a + i);
+    }
+
+    return max;
+}
+
+int main()
+{
+    int arr[] = {12, 45, 3, 78, 34};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Max = %d", findMax(arr, size));
+
+    return 0;
+}
